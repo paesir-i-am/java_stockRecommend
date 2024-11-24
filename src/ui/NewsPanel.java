@@ -17,7 +17,7 @@ public class NewsPanel extends JPanel {
     setLayout(new BorderLayout());
     newsListModel = new DefaultListModel<>();
     newsList = new JList<>(newsListModel);
-    newsList.setCellRenderer(new NewsCellRenderer());  // 커스텀 렌더러 설정
+    newsList.setCellRenderer(new NewsCellRenderer());
 
     newsList.addMouseListener(new MouseAdapter() {
       @Override

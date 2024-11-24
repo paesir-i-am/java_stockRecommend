@@ -19,9 +19,9 @@ public class HeaderPanel extends JPanel {
   private int currentIndex = -1;
   private boolean isHighlighting = false;
   private SearchResultPanel searchResultPanel;
-  private MainApp mainApp; // MainApp 인스턴스 추가
+  private ui.MainApp mainApp; // MainApp 인스턴스 추가
 
-  public HeaderPanel(SearchResultPanel searchResultPanel, MainApp mainApp) {
+  public HeaderPanel(SearchResultPanel searchResultPanel, ui.MainApp mainApp) {
     this.searchResultPanel = searchResultPanel;
     this.mainApp = mainApp; // MainApp 인스턴스 할당
     dataStorage = new DataStorage(); // 데이터 저장소 초기화
@@ -46,7 +46,7 @@ public class HeaderPanel extends JPanel {
 
     searchButton.addActionListener(e -> {
       performSearch(searchField.getText());
-      ((MainApp) SwingUtilities.getWindowAncestor(this)).showSearchResults(); // 검색 결과 표시
+      ((ui.MainApp) SwingUtilities.getWindowAncestor(this)).showSearchResults(); // 검색 결과 표시
     });
 
     suggestionsPopup = new JPopupMenu();

@@ -27,7 +27,6 @@ public class AuthClient {
         System.out.println("token : " + accessToken);
       }
         return accessToken;
-//      return response.getString("access_token");
     } catch (Exception e) {
       e.printStackTrace();
 

@@ -31,7 +31,7 @@ public class DataStorage {
       // 파일이 없는 경우 데이터를 수집
       if (!file.exists()) {
         collector.collectAndSaveData(date);
-        file = new File(fileName);  // 파일이 새로 생겼는지 확인
+        file = new File(fileName);
       }
 
       // 파일이 존재할 경우 로드

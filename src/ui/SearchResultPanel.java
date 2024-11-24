@@ -14,12 +14,12 @@ import java.util.List;
 
 public class SearchResultPanel extends JPanel {
   private JTextArea resultArea;
-  private JPanel graphPanel; // 그래프를 표시할 패널
+  private JPanel graphPanel;
   private List<StockInfo> currentResults;
   private int currentPage = 1;
   private static final int ITEMS_PER_PAGE = 1;
 
-  private final DataStorage dataStorage = new DataStorage(); // 데이터 저장소 인스턴스 생성
+  private final DataStorage dataStorage = new DataStorage();
 
   public SearchResultPanel() {
     setLayout(new BorderLayout());
@@ -29,15 +29,15 @@ public class SearchResultPanel extends JPanel {
     resultArea.setLineWrap(true);
     resultArea.setWrapStyleWord(true);
 
-    // 기존 폰트 크기만 변경
-    Font currentFont = resultArea.getFont(); // 기존 폰트 가져오기
-    Font newFont = currentFont.deriveFont(18f); // 기존 폰트 크기에서 크기만 변경 (18f는 새 크기)
-    resultArea.setFont(newFont); // 폰트 크기 적용
+
+    Font currentFont = resultArea.getFont();
+    Font newFont = currentFont.deriveFont(18f);
+    resultArea.setFont(newFont);
 
     add(new JScrollPane(resultArea), BorderLayout.CENTER);
 
     graphPanel = new JPanel(new BorderLayout());
-    add(graphPanel, BorderLayout.EAST); // 그래프 패널을 오른쪽에 배치
+    add(graphPanel, BorderLayout.EAST);
 
     JButton prevButton = new JButton("이전");
     JButton nextButton = new JButton("다음");

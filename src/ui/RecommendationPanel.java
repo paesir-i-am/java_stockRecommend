@@ -105,7 +105,6 @@ public class RecommendationPanel extends JPanel {
         double closingPrice = Double.parseDouble(stockInfo.getTddClsPrc());
         dataset.addValue(closingPrice, "가격", date);
 
-        // 최소값과 최대값을 추적하여 Y축 범위 설정
         if (closingPrice < minPrice) {
           minPrice = closingPrice;
         }
